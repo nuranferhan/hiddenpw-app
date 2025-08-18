@@ -1,0 +1,67 @@
+name: hidden_pw
+description: Güvenli offline şifre yöneticisi
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.16.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  window_manager: ^0.5.1
+  
+  # UI & Navigation
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
+  
+  # Security
+  crypto: ^3.0.5
+  encrypt: ^5.0.3
+  local_auth: ^2.3.0
+  flutter_secure_storage: ^9.2.2
+  
+  # Database - Windows uyumlu SQLite
+  sqlite3_flutter_libs: ^0.5.0
+  sqlite3: ^2.4.0
+  path_provider: ^2.1.4
+  path: ^1.9.0
+  
+  # HTTP & JSON
+  http: ^1.2.2
+  convert: ^3.1.1
+  
+  # File operations
+  file_picker: ^8.1.2
+  share_plus: ^10.0.2
+  
+  # Utils
+  uuid: ^4.5.1
+  intl: ^0.20.0
+  shared_preferences: ^2.2.2
+  
+  # Additional security packages for password manager
+  pointycastle: ^3.9.1  # Advanced cryptography
+  random_password_generator: ^0.2.1  # For generating secure passwords
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  
+  # Device Preview for better development experience
+  device_preview: ^1.1.0
+  
+  # Testing packages for security critical app
+  mockito: ^5.4.4
+  build_runner: ^2.4.13
+
+flutter:
+  uses-material-design: true
+
+# Flutter configuration for security
+flutter_secure_storage_android:
+  encryptedSharedPreferences: true
+
+flutter_secure_storage_ios:
+  accessibility: first_unlock_this_device
