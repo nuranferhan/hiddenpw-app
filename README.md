@@ -43,13 +43,13 @@
 </div>
 
 ### Security Implementation
-Multi layered security architecture with enterprise-grade protection:
+Multi layered security architecture with enterprise grade protection:
 
 - **AES-256-CBC Encryption**: Industry standard symmetric encryption with unique IV per operation
 - **Custom PBKDF2 Implementation**: 10,000 iterations with SHA-256 HMAC for secure key generation
 - **Platform Security Integration**: Flutter Secure Storage with hardware backed security
 - **Biometric Authentication**: LocalAuth with comprehensive error handling and fallback mechanisms
-- **k-Anonymity Breach Checking**: SHA-1 prefix matching with HaveIBeenPwned API (privacy-preserving)
+- **k-Anonymity Breach Checking**: SHA-1 prefix matching with HaveIBeenPwned API (privacy preserving)
 - **Memory Protection**: Automatic cleanup of sensitive data with secure disposal
 - **Input Validation**: Comprehensive field validation with configurable security limits
 
@@ -265,11 +265,12 @@ This project demonstrates advanced capabilities in:
 
 HiddenPW represents a comprehensive demonstration of modern mobile security development, showcasing advanced proficiency in Flutter development while implementing enterprise grade cryptographic standards and security best practices. The project exemplifies the ability to deliver production quality security applications that balance robust protection with exceptional user experience across multiple platforms.
 
-The application demonstrates mastery of cross-platform development, cryptographic implementation, biometric authentication and offline first architecture principles. Through its security focused design and comprehensive feature set, HiddenPW establishes itself as a professional-grade password management solution suitable for both individual users and enterprise environments.
+The application demonstrates mastery of cross platform development, cryptographic implementation, biometric authentication and offline first architecture principles. Through its security focused design and comprehensive feature set, HiddenPW establishes itself as a professional-grade password management solution suitable for both individual users and enterprise environments.
 
 ---
 
 **Technology Stack:** Flutter • Dart • SQLite • Custom AES-256-CBC • PBKDF2 • Biometric Authentication • Cross Platform Desktop Integration
 
 **Security Standards:** Custom cryptographic implementation • k-Anonymity privacy model • Hardware backed security • Defense in depth architecture
+
 
