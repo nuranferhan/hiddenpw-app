@@ -13,7 +13,7 @@
 
 <div align="center">
   <img width="100%" alt="Image 1" src="https://github.com/user-attachments/assets/273c2b4c-00dc-4ceb-ab4a-45b8d8786dd7" />
-</div>
+</div> 
 
 ## Project Overview
 
@@ -24,7 +24,7 @@
 
 **HiddenPW** is a production ready, cross platform password management application built with Flutter. Demonstrating advanced mobile security development capabilities through enterprise grade encryption, biometric authentication and offline first architecture. Designed with professional security standards, HiddenPW provides comprehensive password management while maintaining complete offline operation for core security functions.
 
-**Key Features:**
+**Key Features:** 
 - **Enterprise grade AES-256-CBC encryption** with custom PBKDF2 implementation (10,000 iterations)
 - **Cross platform desktop & mobile** with responsive window management
 - **Biometric authentication** with TouchID, FaceID and fingerprint scanner support
@@ -272,5 +272,6 @@ The application demonstrates mastery of cross platform development, cryptographi
 **Technology Stack:** Flutter • Dart • SQLite • Custom AES-256-CBC • PBKDF2 • Biometric Authentication • Cross Platform Desktop Integration
 
 **Security Standards:** Custom cryptographic implementation • k-Anonymity privacy model • Hardware backed security • Defense in depth architecture
+
 
 
