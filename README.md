@@ -85,7 +85,7 @@ Architecture: Window Manager | Device Preview | Professional constants managemen
 - **Biometric authentication** with platform hardware integration and comprehensive error handling
 - **Dynamic theme system** with persistent user preferences and Material Design 3
 <div align="center">
-  <img width="80%" alt="Image 1" src="https://github.com/user-attachments/assets/6a85ed28-4556-4d27-b6ba-a38a0d5bf7ca" />
+  <img width="80%" alt="Image 1" src="https://github.com/user-attachments/assets/feeba539-19fb-4d29-89eb-4979234e78fba" />
 </div>
 
 - **Professional settings management** with secure configuration options
@@ -272,6 +272,7 @@ The application demonstrates mastery of cross platform development, cryptographi
 **Technology Stack:** Flutter • Dart • SQLite • Custom AES-256-CBC • PBKDF2 • Biometric Authentication • Cross Platform Desktop Integration
 
 **Security Standards:** Custom cryptographic implementation • k-Anonymity privacy model • Hardware backed security • Defense in depth architecture
+
 
 
 
