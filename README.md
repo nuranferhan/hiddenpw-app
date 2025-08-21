@@ -11,14 +11,23 @@
 <img src="https://img.shields.io/badge/Cross--Platform-Android%20%7C%20iOS%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-4CAF50?style=for-the-badge" alt="Cross Platform" />
 </div>
 
+<div align="center">
+  <img width="100%" alt="Image 1" src="https://github.com/user-attachments/assets/273c2b4c-00dc-4ceb-ab4a-45b8d8786dd7" />
+</div>
+
 ## Project Overview
 
-**HiddenPW** is a production ready, cross platform password management application built with Flutter. Demonstrating advanced mobile security development capabilities through enterprise grade encryption, biometric authentication, and offline first architecture. Designed with professional security standards, HiddenPW provides comprehensive password management while maintaining complete offline operation for core security functions.
+<div align="center">
+  <img width="28.41%" alt="Image 2" src="https://github.com/user-attachments/assets/db3817ed-ee44-4ae1-b820-497725d0e529" />
+  <img width="55%" alt="Image 1" src="https://github.com/user-attachments/assets/1300e422-a7ee-46b3-a9ea-499fcdb3bab5" />
+</div>
+
+**HiddenPW** is a production ready, cross platform password management application built with Flutter. Demonstrating advanced mobile security development capabilities through enterprise grade encryption, biometric authentication and offline first architecture. Designed with professional security standards, HiddenPW provides comprehensive password management while maintaining complete offline operation for core security functions.
 
 **Key Features:**
 - **Enterprise grade AES-256-CBC encryption** with custom PBKDF2 implementation (10,000 iterations)
-- **Cross-platform desktop & mobile** with responsive window management
-- **Biometric authentication** with TouchID, FaceID, and fingerprint scanner support
+- **Cross platform desktop & mobile** with responsive window management
+- **Biometric authentication** with TouchID, FaceID and fingerprint scanner support
 - **Offline first architecture** ensuring complete privacy and zero network dependency for core operations
 - **Secure password generator** with customizable complexity parameters
 - **Breach detection integration** with HaveIBeenPwned API using k-anonymity model
@@ -28,12 +37,17 @@
 
 ## Technical Architecture
 
+<div align="center">
+  <img width="60%" alt="Image 1" src="https://github.com/user-attachments/assets/dd832600-46de-4ac4-be1f-fd14e38713eb" />
+  <img width="28.1%" alt="Image 2" src="https://github.com/user-attachments/assets/2a760984-801c-4101-862a-4b57bc82f914" />
+</div>
+
 ### Security Implementation
 Multi layered security architecture with enterprise-grade protection:
 
 - **AES-256-CBC Encryption**: Industry standard symmetric encryption with unique IV per operation
 - **Custom PBKDF2 Implementation**: 10,000 iterations with SHA-256 HMAC for secure key generation
-- **Platform Security Integration**: Flutter Secure Storage with hardware-backed security
+- **Platform Security Integration**: Flutter Secure Storage with hardware backed security
 - **Biometric Authentication**: LocalAuth with comprehensive error handling and fallback mechanisms
 - **k-Anonymity Breach Checking**: SHA-1 prefix matching with HaveIBeenPwned API (privacy-preserving)
 - **Memory Protection**: Automatic cleanup of sensitive data with secure disposal
@@ -45,7 +59,7 @@ Frontend:     Flutter 3.16+ | Dart 3.0+ | Material Design 3 with Turkish localiz
 Database:     SQLite3 with AES-256 encrypted password fields
 Security:     Custom AES-256-CBC | PBKDF2 | SHA-256 | LocalAuth biometrics
 Platforms:    Android 6.0+ | iOS 11.0+ | Windows 10+ | macOS 10.14+ | Linux
-Storage:      Flutter Secure Storage with platform-specific backends
+Storage:      Flutter Secure Storage with platform specific backends
 Architecture: Window Manager | Device Preview | Professional constants management
 ```
 
@@ -56,7 +70,7 @@ Architecture: Window Manager | Device Preview | Professional constants managemen
 - **Advanced search and filtering** with live results across encrypted database
 - **Password strength analysis** with visual security indicators (0-100 scoring)
 - **Compromise detection** with automatic flagging and security alerts
-- **Secure metadata storage** for titles, usernames, URLs, and notes
+- **Secure metadata storage** for titles, usernames, URLs and notes
 - **Export/import functionality** with JSON based encrypted backup system
 
 ### Security Dashboard
@@ -70,12 +84,20 @@ Architecture: Window Manager | Device Preview | Professional constants managemen
 - **Master password protection** with custom PBKDF2 derived encryption (10,000 iterations)
 - **Biometric authentication** with platform hardware integration and comprehensive error handling
 - **Dynamic theme system** with persistent user preferences and Material Design 3
+<div align="center">
+  <img width="80%" alt="Image 1" src="https://github.com/user-attachments/assets/6a85ed28-4556-4d27-b6ba-a38a0d5bf7ca" />
+</div>
+
 - **Professional settings management** with secure configuration options
 - **Breach detection system** using HaveIBeenPwned k-anonymity model with SHA-1 prefix matching
 - **Memory safe operations** with automatic sensitive data cleanup
 - **Professional error handling** with comprehensive Turkish localized feedback
-
+  
 ### Password Generator
+<div align="center">
+  <img width="30%" alt="Image 1" src="https://github.com/user-attachments/assets/1e101522-3989-4c38-a79e-5ffd1aa8b678" />
+</div>
+
 - **Secure generation** with customizable parameters (length, character sets, complexity rules)
 - **Real time strength validation** with integrated security analysis
 - **Professional UX**: character category selection, instant generation, copy to clipboard functionality
@@ -99,9 +121,6 @@ Dart SDK: 3.0.0+
 
 ### Setup Instructions
 ```bash
-# Clone repository
-git clone https://github.com/your-username/hidden_pw.git
-cd hidden_pw
 
 # Install dependencies
 flutter pub get
@@ -169,120 +188,6 @@ hidden_pw/
 └── README.md                                # Project documentation
 ```
 
-## Key Implementation Examples
-
-### Custom PBKDF2 Implementation
-```dart
-class EncryptionService {
-  // Custom PBKDF2 implementation with 10,000 iterations
-  Key _deriveKeyFromPassword(String password) {
-    const iterations = 10000;
-    final salt = utf8.encode('HiddenPW-Salt');
-    
-    var hmac = Hmac(sha256, utf8.encode(password));
-    var digest = hmac.convert(salt);
-    
-    // Perform 10,000 iterations for key strengthening
-    for (int i = 0; i < iterations; i++) {
-      hmac = Hmac(sha256, digest.bytes);
-      digest = hmac.convert(salt);
-    }
-    
-    return Key(Uint8List.fromList(digest.bytes));
-  }
-  
-  // AES-256-CBC with unique IV per operation
-  String encryptData(String plainText) {
-    final iv = IV.fromSecureRandom(16);
-    final encrypted = _encrypter.encrypt(plainText, iv: iv);
-    return '${iv.base64}:${encrypted.base64}';
-  }
-}
-```
-
-### k-Anonymity Breach Detection
-```dart
-class BreachCheckerService {
-  Future<bool> isPasswordCompromised(String password) async {
-    // SHA-1 hash for k-anonymity model (privacy-preserving)
-    final sha1Hash = sha1.convert(utf8.encode(password)).toString().toUpperCase();
-    final prefix = sha1Hash.substring(0, 5);  // Only send first 5 characters
-    final suffix = sha1Hash.substring(5);     // Keep suffix locally
-
-    final response = await http.get(
-      Uri.parse('https://api.pwnedpasswords.com/range/$prefix'),
-      headers: {'User-Agent': 'HiddenPW-App'},
-    );
-
-    // Check suffix match in returned hash list
-    final lines = response.body.split('\n');
-    for (final line in lines) {
-      final parts = line.split(':');
-      if (parts[0] == suffix) return true;
-    }
-    return false;
-  }
-}
-```
-
-### Professional Desktop Integration
-```dart
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  
-  // Desktop window management with iPhone like dimensions
-  if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
-    await windowManager.ensureInitialized();
-    
-    WindowOptions windowOptions = const WindowOptions(
-      size: Size(400, 800),          // iPhone-like aspect ratio
-      center: true,
-      minimumSize: Size(350, 600),   // Minimum usable size
-      maximumSize: Size(450, 900),   // Maximum size constraint
-    );
-    
-    windowManager.waitUntilReadyToShow(windowOptions, () async {
-      await windowManager.show();
-      await windowManager.focus();
-    });
-  }
-  
-  // Initialize services
-  await StorageService.instance.init();
-  await ThemeService.instance.init();
-  
-  // Enable Device Preview for desktop development
-  runApp(
-    DevicePreview(
-      enabled: !Platform.isAndroid && !Platform.isIOS,
-      defaultDevice: Devices.ios.iPhoneSE,
-      devices: [
-        Devices.ios.iPhoneSE,
-        Devices.ios.iPhone12,
-        Devices.android.samsungGalaxyS20,
-      ],
-      builder: (context) => const HiddenPWApp(),
-    ),
-  );
-}
-```
-
-### Real time Security Dashboard
-```dart
-// Security statistics with real time updates
-int compromisedCount = _passwords.where((p) => p.isCompromised).length;
-int weakPasswordCount = _passwords.where((p) => _isPasswordWeak(p.password) && !p.isCompromised).length;
-int totalRiskyPasswords = compromisedCount + weakPasswordCount;
-int safePasswordCount = _passwords.length - totalRiskyPasswords;
-
-// Auto refresh mechanism
-Timer.periodic(Duration(seconds: 5), (timer) {
-  print('Auto refreshing passwords...');
-  _loadPasswords();
-  if (timer.tick > 6) timer.cancel(); // Stop after 30 seconds
-});
-```
-
 ## Security Standards & Best Practices
 
 ### Cryptographic Implementation
@@ -298,7 +203,7 @@ Timer.periodic(Duration(seconds: 5), (timer) {
 - **Hardware Security Integration**: Platform specific secure storage and biometrics
 - **Professional Error Handling**: Comprehensive exception management with Turkish localization
 - **Input Validation**: Configurable limits with format validation and sanitization
-- **Security Monitoring**: Real-time password health analysis and breach alerting
+- **Security Monitoring**: Real time password health analysis and breach alerting
 
 ## Build & Deployment
 
@@ -358,7 +263,7 @@ This project demonstrates advanced capabilities in:
 
 ## Conclusion
 
-HiddenPW represents a comprehensive demonstration of modern mobile security development, showcasing advanced proficiency in Flutter development while implementing enterprise-grade cryptographic standards and security best practices. The project exemplifies the ability to deliver production quality security applications that balance robust protection with exceptional user experience across multiple platforms.
+HiddenPW represents a comprehensive demonstration of modern mobile security development, showcasing advanced proficiency in Flutter development while implementing enterprise grade cryptographic standards and security best practices. The project exemplifies the ability to deliver production quality security applications that balance robust protection with exceptional user experience across multiple platforms.
 
 The application demonstrates mastery of cross-platform development, cryptographic implementation, biometric authentication and offline first architecture principles. Through its security focused design and comprehensive feature set, HiddenPW establishes itself as a professional-grade password management solution suitable for both individual users and enterprise environments.
 
@@ -367,3 +272,4 @@ The application demonstrates mastery of cross-platform development, cryptographi
 **Technology Stack:** Flutter • Dart • SQLite • Custom AES-256-CBC • PBKDF2 • Biometric Authentication • Cross Platform Desktop Integration
 
 **Security Standards:** Custom cryptographic implementation • k-Anonymity privacy model • Hardware backed security • Defense in depth architecture
+
