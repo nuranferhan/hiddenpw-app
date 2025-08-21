@@ -27,13 +27,13 @@
 **Key Features:** 
 - **Enterprise grade AES-256-CBC encryption** with custom PBKDF2 implementation (10,000 iterations)
 - **Cross platform desktop & mobile** with responsive window management
-- **Biometric authentication** with TouchID, FaceID and fingerprint scanner support
+- **Biometric authentication** with TouchID, FaceID and fingerprint scanner support 
 - **Offline first architecture** ensuring complete privacy and zero network dependency for core operations
 - **Secure password generator** with customizable complexity parameters
 - **Breach detection integration** with HaveIBeenPwned API using k-anonymity model
 - **Real time security dashboard** with password strength analysis and compromise alerting
 - **Professional Turkish localization** with native user experience
-- **Timer based auto refresh** with real time data synchronization
+- **Timer based auto refresh** with real time data synchronization 
 
 ## Technical Architecture
 
@@ -272,6 +272,7 @@ The application demonstrates mastery of cross platform development, cryptographi
 **Technology Stack:** Flutter • Dart • SQLite • Custom AES-256-CBC • PBKDF2 • Biometric Authentication • Cross Platform Desktop Integration
 
 **Security Standards:** Custom cryptographic implementation • k-Anonymity privacy model • Hardware backed security • Defense in depth architecture
+
 
 
 
